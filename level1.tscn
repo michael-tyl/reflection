@@ -1,0 +1,80 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://img/bg/level.png" type="Texture" id=1]
+[ext_resource path="res://fonts/Dancing-Script/DancingScript-VariableFont_wght.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/level/level1.gd" type="Script" id=3]
+[ext_resource path="res://fonts/Montserrat/Montserrat-Light.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scripts/level/menu-button.gd" type="Script" id=5]
+[ext_resource path="res://fonts/Montserrat/Montserrat-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://scripts/level/restart-level.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 54
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 96
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 4 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="bg" type="TextureRect" parent="."]
+margin_right = 1921.89
+margin_bottom = 1075.76
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+margin_left = 1796.0
+margin_top = 18.0
+margin_right = 1916.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 1 )
+text = "Menu"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+margin_left = 1636.0
+margin_top = 18.0
+margin_right = 1789.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 1 )
+text = "Restart"
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer"]
+margin_left = 1842.0
+margin_top = 962.0
+margin_right = 1918.0
+margin_bottom = 1080.0
+custom_fonts/font = SubResource( 3 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 10.0791
+margin_top = 33.5712
+margin_right = 1629.08
+margin_bottom = 93.5712
+custom_fonts/font = SubResource( 2 )
+text = "The nexus (right) needs power! Click on the synthesizer (left) to fire a beam of light"
+__meta__ = {
+"_edit_use_anchors_": false
+}

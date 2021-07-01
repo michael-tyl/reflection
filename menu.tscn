@@ -1,0 +1,127 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://img/bg/menu.png" type="Texture" id=1]
+[ext_resource path="res://fonts/Dancing-Script/DancingScript-VariableFont_wght.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scripts/menu/startButton.gd" type="Script" id=3]
+[ext_resource path="res://fonts/Montserrat/Montserrat-Light.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://scripts/menu/exitButton.gd" type="Script" id=5]
+[ext_resource path="res://scripts/menu/resetButton.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 240
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 81
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 120
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 72
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = -4.13269
+margin_right = 1920.0
+margin_bottom = 1075.87
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="title" type="Label" parent="CanvasLayer"]
+margin_top = 30.0
+margin_right = 1920.0
+margin_bottom = 300.0
+custom_fonts/font = SubResource( 1 )
+text = "reflection"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 11.8746
+margin_top = 950.481
+margin_right = 1463.87
+margin_bottom = 1073.48
+custom_fonts/font = SubResource( 2 )
+text = "Note: you will lose your progress if you exit the game
+(Going back to menu keeps your progress)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="by" type="Label" parent="CanvasLayer"]
+margin_left = 804.181
+margin_top = 286.938
+margin_right = 1117.18
+margin_bottom = 384.938
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.619608, 0.847059, 0.643137, 1 )
+text = "michael liu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchor_left = 0.00110359
+anchor_right = 0.00110359
+margin_left = 760.0
+margin_top = 605.576
+margin_right = 1160.0
+margin_bottom = 775.576
+custom_fonts/font = SubResource( 4 )
+text = "start"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="CanvasLayer"]
+anchor_left = 0.00110359
+anchor_right = 0.00110359
+margin_left = 1539.44
+margin_top = 785.552
+margin_right = 1909.44
+margin_bottom = 894.552
+custom_fonts/font = SubResource( 5 )
+text = "reset progress"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+anchor_left = 0.00110359
+anchor_right = 0.00110359
+margin_left = 1610.88
+margin_top = 910.0
+margin_right = 1902.88
+margin_bottom = 1061.0
+custom_fonts/font = SubResource( 4 )
+text = "exit"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="CanvasLayer/Button2" method="_on_Button_pressed"]
