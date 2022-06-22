@@ -17,4 +17,4 @@ I would like to add sound effects and better graphics to Reflection. Particles f
 Montserrat font by: Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral, Jacques Le Bailly 
 Dancing-Script font by: Pablo Impallari 
 ## Extra notes
-The GitHub pages website (somebodynotanonymous.github.io) is configured to run the game using Godot's HTML5 export feature. The MediaFire link contains compiled binaries for Windows, Mac, and Linux.
+The GitHub pages website (reflectiongame.github.io) is configured to run the game using Godot's HTML5 export feature. The MediaFire link contains compiled binaries for Windows, Mac, and Linux.
